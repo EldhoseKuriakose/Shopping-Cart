@@ -1,16 +1,6 @@
 import React from 'react';
 
 class CartItem extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            price: 999,
-            title: 'Mobile Phone',
-            qty: 1,
-            img: ''
-        }
-        // this.increaseQuantity = this.increaseQuantity.bind(this);
-    }
     increaseQuantity = () => {
         //setState form
         // this.setState({
@@ -36,8 +26,8 @@ class CartItem extends React.Component {
         });
     }
     render() {
-        const{price, title, qty} = this.state;
-        return (
+        const{price, title, qty} = this.props.product;
+        return(
             <div className="cart-item">
                 <div className="left-block">
                     <img style={styles.image}/>
@@ -49,21 +39,21 @@ class CartItem extends React.Component {
                     <div className="cart-item-actions">
                         {/* Buttons */}
                         <img
-                         alt="increase" 
-                         className="action-icons" 
-                         src="https://image.flaticon.com/icons/svg/1828/1828926.svg"
-                         onClick={this.increaseQuantity}
+                            alt="increase" 
+                            className="action-icons" 
+                            src="https://image.flaticon.com/icons/svg/1828/1828926.svg"
+                            onClick={this.increaseQuantity}
                         />
                         <img
-                         alt="decrease" 
-                         className="action-icons" 
-                         src="https://image.flaticon.com/icons/svg/1828/1828906.svg" 
-                         onClick={this.decreaseQuantity}
+                            alt="decrease" 
+                            className="action-icons" 
+                            src="https://image.flaticon.com/icons/svg/1828/1828906.svg" 
+                            onClick={this.decreaseQuantity}
                         />
                         <img
-                         alt="delete" 
-                         className="action-icons" 
-                         src="https://image.flaticon.com/icons/svg/1214/1214428.svg"
+                            alt="delete" 
+                            className="action-icons" 
+                            src="https://image.flaticon.com/icons/svg/1214/1214428.svg"
                         />
                     </div>
                 </div>
