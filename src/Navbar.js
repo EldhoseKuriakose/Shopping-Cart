@@ -29,7 +29,7 @@ const styles = {
     cartCount: {
         background: 'yellow',
         borderRadius: '50%',
-        padding: '1px 7px',
+        padding: '1px 5px',
         position: 'absolute',
         marginTop: 15,
         marginRight: 10,
